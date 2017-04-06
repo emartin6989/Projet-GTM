@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+
+/*tous les elements avec un attribut class maclasse sont en violet*/
+.maclasse{
+	color: violet;
+}
+
+/*le seul élément avec un id toto sera en marron*/
+#toto{
+	color: brown;
+}

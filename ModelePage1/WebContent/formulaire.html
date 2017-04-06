@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Modèle</title>
+		<!--sert à récupérer la taille du terminal utilisé  -->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+		<link rel="stylesheet" href="css/style.css"/>
+	</head>
+	<body>
+		<div id="entete">
+			<h1>Site de démonstration</h1>
+		</div>
+		<div id="nav">
+			<div class="block menu1">
+				<h3>Les planètes</h3>
+				<ul>
+					<li><a href=#>Mercure</a></li>
+					<li><a href=#>Venus</a></li>
+					<li><a href=#>Terre</a></li>
+					<li><a href=#>Jupiter</a></li>
+					<li><a href=#>Saturne</a></li>
+					<li><a href=#>Uranus</a></li>
+					<li><a href=#>Neptune</a></li>
+				</ul>
+			</div>
+			<div class="block menu2">
+				<h3>Les étoiles</h3>
+				<ul>
+					<li><a href=#>Le Soleil</a></li>
+					<li><a href=#>Les Pulsars</a></li>
+					<li><a href=#>Les trous noirs</a></li>
+					<li><a href=#>Les naines blanches</a></li>
+					<li><a href="index.html">Aller sur la page index</a></li>
+					<li><a href="page2.html">Aller sur la page 2</a></li>
+					<li><a href="tableau.html">Aller sur la page tableau</a></li>
+					<li><a href="formulaire.html">Aller sur la page formulaire</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="content">
+			<div class="block">
+				<h2>Formulaire</h2>
+				<form action="Post" action="#">
+					<fieldset id="section1">
+						<legend>Informations Personnelles</legend>
+						<label for="nom">Saisir votre nom :</label>
+						<input type="text" name="nom" id="nom"/><br/>
+						<label for="prenom">Saisir votre prénom :</label>
+						<input type="text" name="prenom" id="prenom"/><br/>
+						<label for="mdp">Saisir votre mot de passe :</label>
+						<input type="password" name="mdp" id="mdp"/><br/>
+					</fieldset>
+					<input type="submit" value="valider"/>
+				</form>
+			</div>
+			<!-- on donne deux noms de classes, block groupera avec les autres classes block, footer ne correspondra qu'au pied de page -->
+			<div class="block footer">
+				<p>Copyright DEMO LYON 2017</p>
+				<a href="mailto:contact@example.com">Me contacter</a> si vous avez des questions
+			</div>
+		</div>
+	</body>
+</html>

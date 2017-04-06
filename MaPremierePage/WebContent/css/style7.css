@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+div{
+	/*couleur de fond de la div*/
+	background-color: #8080ff;
+	/*largeur des boites*/
+	width: 500px;
+	/*taille de la marge interieure*/
+	padding: 20px;
+	/*taille de la bordure trait plein couleur*/
+	border: 20px solid green;
+	margin: 50px;
+}

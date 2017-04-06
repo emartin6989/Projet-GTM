@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+
+h1{
+	text-align: center;
+	text-transform: uppercase;
+	/*decalage à droite decalage en bas taille de la police couleur de l'ombre*/
+	text-shadow: 1.5px 1.5px 2.5px #f29302;
+}
+
+.p1{
+	text-align: left;
+	text-transform: lowercase;
+	float: left;
+	}	
+	
+.p2{
+	text-align: right;
+	text-transform: capitalize;
+	float: right;
+	}

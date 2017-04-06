@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+
+/*applique le meme style au deux classes*/
+.para1, .para2{
+	display: inline;
+}
+#sp2{
+	display: block;
+}

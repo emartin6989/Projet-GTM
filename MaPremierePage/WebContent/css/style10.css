@@ -1,0 +1,44 @@
+@CHARSET "UTF-8";
+div {
+	background-color: #8792f5;	
+	width: 400px;
+	border: 5px solid #777;
+	/*Pour arrondir les bords*/
+	border-radius: 15px;
+	z-index: 1;
+}
+.para1{
+	/*fixe la position sur la position par défaut*/
+	position: static;
+	/*descendre l'elt de 100px mais ne fonctionnera pas car static*/
+	top: 100px;
+	/*décaler a droite de 50 px mais ne fonctionnera pas car static*/
+	left: 50px;
+}
+.para2{
+	/*position bouge par rapport à la position par défaut*/
+	position : relative;
+	/*décaler a droite de 50 px */
+	left: 50px;
+}
+h1{
+	background-color: yellow;
+	width: 200px;
+	border: 5px solid #777;
+	/*garde une position fixe et sort du flux d'affichage. Tout le temps à l'ecran*/
+	position: fixed;
+	top: 0px;
+	left: 400px;
+	border-radius: 15px;
+	/*on veut qu'il apparaisse devant tous, il doit avoir le z index le plus fort*/
+	z-index: 3;
+}
+h2{
+	background-color: #AA2;
+	/*position bouge par rapport à la balise mère qui est ici <body>*/
+	position: absolute;
+	top: 10px;
+	left: 200px;
+	/*on veut qu'il apparaisse sous h1 mais devant le reste*/
+	z-index: 2;
+}

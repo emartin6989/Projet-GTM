@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+
+.para {
+	color: blue;
+}
+
+.para1 {
+	color: green;
+}
+
+.styleTitre {
+	color: red;
+}
+
+.texteDroite{
+	text-align: right;
+}
+
+img {width: 500px;
+	
+}

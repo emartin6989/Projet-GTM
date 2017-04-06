@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Héritage</title>
+		<!-- seul le style de strong est gardé car il n'est pas redéfinit dans le style 4 -->
+		<link rel="stylesheet" href="css/style3.css"/>
+		<!-- le style 4 est appelé après le style 3, il domine en cas de conflit -->
+		<link rel="stylesheet" href="css/style4.css"/>
+	</head>
+	<body>
+		<!-- body domine -->
+		<h1>Un titre de niveau 1</h1>
+		<!-- strong domine puis p -->
+		<p>Un paragraphe avec un <strong>texte important</strong>.</p>
+		<!-- l id domine -->
+		<p id=para>Un autre paragraphe.</p>
+		<!-- p domine sur body -->
+		<p>Un troisieme paragraphe.</p>
+	</body>
+</html>
