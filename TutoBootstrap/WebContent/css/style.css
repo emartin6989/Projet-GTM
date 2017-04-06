@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+.menu{
+	background-color: pink;
+	color:violet;
+}
+.corps{
+	background-color: violet;
+	color:pink;
+}
