@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Modèle</title>
+		<!--sert à récupérer la taille du terminal utilisé  -->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+		<link rel="stylesheet" href="css/style.css"/>
+	</head>
+	<body>
+		<div id="content">
+			<div class="block">
+				<h2>Formulaire</h2>
+				<form method="post" action="MaServlet">
+					<fieldset id="section1">
+						<legend>Informations Personnelles</legend>
+						<label for="nom">Saisir votre nom :</label>
+						<input type="text" name="nom" id="nom"/><br/>
+						<label for="prenom">Saisir votre prénom :</label>
+						<input type="text" name="prenom" id="prenom"/><br/>
+						<label for="mdp">Saisir votre mot de passe :</label>
+						<input type="password" name="mdp" id="mdp"/><br/>
+					</fieldset>
+					<fieldset id="section2">
+						<legend>Informations complémentaires</legend>
+						<!-- cases a cocher -->
+						Loisirs : 
+						Cinéma<input type="checkbox" name="Loisirs" value="Cinéma"/>
+						Football<input type="checkbox" name="Loisirs" value="Football"/>
+						Jeux vidéos<input type="checkbox" name="Loisirs" value="Jeux vidéos"/>
+					</fieldset>
+					<input type="submit" value="valider"/>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
