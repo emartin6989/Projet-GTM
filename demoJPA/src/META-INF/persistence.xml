@@ -10,7 +10,9 @@
             <property name="hibernate.format_sql" value="true" />
  
             <!-- Configuration de la  BDD -->
+            <!-- chargement du pilote -->
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <!-- adresse de la bdd, login, mdp -->
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/demojpa" />
             <property name="javax.persistence.jdbc.user" value="root" />
             <property name="javax.persistence.jdbc.password" value="" />
