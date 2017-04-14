@@ -1,5 +1,8 @@
 package presentation;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -7,6 +10,7 @@ import javax.persistence.Persistence;
 
 import metier.Adresse;
 import metier.Contact;
+import metier.Film;
 import metier.LongMetrage;
 import metier.TeleFilm;
 
@@ -26,8 +30,8 @@ public class Lanceur {
 		LongMetrage lm = new LongMetrage();
 		lm.setCinema("Pathé");
 		lm.setNomFilm("tutu va tater");
-		
-		TeleFilm tf= new TeleFilm();
+
+		TeleFilm tf = new TeleFilm();
 		tf.setChaine("FR2");
 		tf.setNomFilm("TUTU");
 
@@ -42,11 +46,18 @@ public class Lanceur {
 		c.setEmail("toto@example.com");
 		c.setAdresse(a);
 
+		// ajout dans ManyToMany
+		Set<Film> films = new HashSet<Film>();
+		films.add(tf);
+		films.add(lm);
+		c.setFilms(films);
+
 		// 4 : persistance de l'objet métier
+		System.out.println(c);
 		em.persist(c);
-		em.persist(lm);
-		em.persist(tf);
-		
+		// em.persist(lm);
+		// em.persist(tf);
+
 		// 5: fermeture de la transaction
 		tx.commit();
 

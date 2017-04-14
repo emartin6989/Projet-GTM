@@ -10,8 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
-
-
 @Entity
 public class Contact {
 	@Id
@@ -24,8 +22,8 @@ public class Contact {
 	// cascade. Attention juste utiliser avec persist.
 	@ManyToOne(cascade = CascadeType.PERSIST)
 	private Adresse adresse;
-	//contact est l'esclave de film
-	@ManyToMany(mappedBy = "contacts")
+	// contact est l'esclave de film
+	@ManyToMany(cascade = CascadeType.PERSIST)
 	private Collection<Film> films;
 
 	public int getId() {
