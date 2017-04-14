@@ -2,7 +2,6 @@ package metier;
 
 import java.util.Collection;
 
-import javax.persistence.CascadeType;
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,12 +10,16 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.ManyToMany;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 
 @Entity
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name="TYPE_FILM")
-// @Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
-//@Inheritance(strategy = InheritanceType.JOINED)
+@NamedQueries({@NamedQuery(name="Film.findAll", query="SELECT f from Film f"), 
+@NamedQuery(name="Film.findName", query="select f from Film f where f.nomFilm = :fnom"),
+@NamedQuery(name="Film.findWord", query="select f from Film f where f.nomFilm like :fnom")
+})
 public abstract class Film {
 
 	@Id
