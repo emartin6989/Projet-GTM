@@ -61,6 +61,10 @@ public class Lanceur {
 		// 5: fermeture de la transaction
 		tx.commit();
 
+		// recupérer le film id = 1
+		Film f = em.find(Film.class, 1);
+		System.out.println(f);
+
 		// 6 : fermeture de l'unité de persistance
 		em.close();
 		emf.close();

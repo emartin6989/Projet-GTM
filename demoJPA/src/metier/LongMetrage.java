@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 
 @Entity
 @DiscriminatorValue("LONG")
-public class LongMetrage extends Film{
+public class LongMetrage extends Film {
 	private String cinema;
 
 	public String getCinema() {
@@ -16,5 +16,9 @@ public class LongMetrage extends Film{
 		this.cinema = cinema;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "LongMetrage [cinema=" + cinema + ", toString()=" + super.toString() + "]";
+	}
+
 }
