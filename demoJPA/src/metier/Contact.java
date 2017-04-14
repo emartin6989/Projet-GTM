@@ -4,13 +4,16 @@ import java.util.Collection;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
 
 @Entity
+@NamedQuery(name="Contact.findAll",query="SELECT c FROM Contact c")
 public class Contact {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -23,7 +26,7 @@ public class Contact {
 	@ManyToOne(cascade = CascadeType.PERSIST)
 	private Adresse adresse;
 	// contact est l'esclave de film
-	@ManyToMany(cascade = CascadeType.PERSIST)
+	@ManyToMany(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
 	private Collection<Film> films;
 
 	public int getId() {

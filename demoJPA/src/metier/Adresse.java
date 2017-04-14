@@ -3,15 +3,19 @@ package metier;
 import java.util.Collection;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Transient;
 
 @Entity
+@NamedQueries({ @NamedQuery(name = "Adress.findAll", query = "SELECT a from Adresse a"),
+		@NamedQuery(name = "Adress.findLetter", query = "SELECT a FROM Adresse a WHERE a.numRue like :numRue") })
 public class Adresse {
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int idAdresse;
@@ -20,8 +24,8 @@ public class Adresse {
 	private String codePostal;
 	@Transient
 	private String commentaires;
-	//adresse est esclave de client
-	@OneToMany(mappedBy = "adresse")
+	// adresse est esclave de client
+	@OneToMany(mappedBy = "adresse", fetch = FetchType.LAZY)
 	private Collection<Contact> contacts;
 
 	public int getIdAdresse() {
